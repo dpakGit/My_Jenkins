@@ -13,7 +13,7 @@ echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]"  https://pkg.jenkin
 
 ```
 sudo apt update
-sudo apt install jenkins
+sudo apt install jenkins -y
 jenkins --version
 ```
 
