@@ -1,3 +1,5 @@
+https://www.jenkins.io/doc/book/installing/linux/
+
 ```
 sudo apt update
 sudo apt install openjdk-17-jdk -y
