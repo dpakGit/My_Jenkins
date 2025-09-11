@@ -20,3 +20,8 @@ sudo systemctl enable jenkins
 sudo systemctl start jenkins
 sudo systemctl status jenkins
 ```
+You can try using curl to display your public IP. Here are a few options:
+- curl ifconfig.me
+- curl ipinfo.io/ip
+- curl icanhazip.com
+
