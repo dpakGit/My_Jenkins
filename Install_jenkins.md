@@ -3,7 +3,7 @@ https://www.jenkins.io/doc/book/installing/linux/
 ```
 sudo apt update
 sudo apt install openjdk-17-jdk -y
-jenkins -version
+java -version
 ```
 ```
 sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
