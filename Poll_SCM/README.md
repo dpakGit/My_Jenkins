@@ -73,7 +73,7 @@ How it Works
 
 Jenkins will now poll the Git repository at the specified interval (every 5 minutes in this example). If changes are detected, Jenkins will trigger the job to build and execute the subsequent jobs (build and test) in the pipeline.
 
-Note that SCM polling can be resource-intensive and may not be suitable for large repositories or frequent polling intervals. In such cases, consider using webhooks or other trigger mechanisms.
+### Note that SCM polling can be resource-intensive and may not be suitable for large repositories or frequent polling intervals. In such cases, consider using webhooks or other trigger mechanisms.
 
 
 When Jenkins "polls" the Git repository, it means that Jenkins periodically checks the repository for changes. Here's what happens during polling:
