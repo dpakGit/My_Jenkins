@@ -43,7 +43,7 @@ bash
 echo "Running on branch: $BRANCH"
 git checkout $BRANCH
 
-
+The command echo "Running on branch: $BRANCH" will print the value of the BRANCH parameter to the console output. This allows you to verify that the parameter is being set correctly.
 
 Step 5: Save and Run the Job
 
