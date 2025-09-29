@@ -39,9 +39,10 @@ Step 4: Add a Build Step to Verify the Parameter
 - Click on "Add build step" and select "Execute shell"
 - In the command field, enter the following:
 
-bash
+```
 echo "Running on branch: $BRANCH"
 git checkout $BRANCH
+```
 
 The command echo "Running on branch: $BRANCH" will print the value of the BRANCH parameter to the console output. This allows you to verify that the parameter is being set correctly.
 
@@ -59,25 +60,27 @@ Note : - In Step 2, you might want to specify that the string parameter should b
 
 Example 1: Simple Error Handling
 
-bash
+```
 echo "Running on branch: $BRANCH"
 git checkout $BRANCH
 if [ $? -ne 0 ]; then
   echo "Error: Failed to checkout branch $BRANCH"
   exit 1
 fi
+```
 
 This will check the exit status of the git checkout command and print an error message if it fails.
 
 Example 2: Logging and Error Handling
 
-bash
+```
 echo "Running on branch: $BRANCH"
 git checkout $BRANCH 2>&1 | tee checkout.log
 if [ $? -ne 0 ]; then
   echo "Error: Failed to checkout branch $BRANCH. See checkout.log for details."
   exit 1
 fi
+```
 
 This will log the output of the git checkout command to a file named checkout.log and print an error message if it fails.
 
