@@ -83,13 +83,14 @@ This will log the output of the git checkout command to a file named checkout.lo
 
 Example 3: More Robust Error Handling
 
-bash
+```
 echo "Running on branch: $BRANCH"
 if ! git checkout $BRANCH; then
   echo "Error: Failed to checkout branch $BRANCH"
   git status
   exit 1
 fi
+```
 
 This will print the git status output if the checkout fails, which can help with debugging.
 
