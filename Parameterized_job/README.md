@@ -5,7 +5,7 @@ Alternatively, create a new job by navigating to "New Item" and selecting the de
 Configure the Job:
 Navigate to the job's configuration page. For a Freestyle project, this is typically done by clicking "Configure" on the job's main page.
 Enable Parameterized Builds:
-In the "General" section of the job configuration, locate and check the "This project is parameterized" checkbox.
+In the "General" section of the job configuration, locate and check the ✅"This project is parameterized" checkbox.
 Add Parameters:
 Click the "Add Parameter" dropdown button that appears after enabling parameterized builds.
 Select the desired parameter type (e.g., String Parameter, Boolean Parameter, Choice Parameter, Password Parameter, File Parameter, etc.).
