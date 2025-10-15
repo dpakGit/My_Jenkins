@@ -50,7 +50,7 @@ pipeline {
         }
     }
 }
-``
+```
 In this example, the BRANCH parameter determines which branch to check out from the Git repository during the build process.
 
 Yes, BRANCH is a variable in the context of Jenkins parameterized builds.
@@ -68,3 +68,13 @@ Here's a simpler version:
 Or even:
 
 "Think of Jenkins parameters like placeholders that hold values. You can use ${BRANCH} to use the value in your scripts."
+
+In the Branch Specifier box in Jenkins, you would simply use:
+
+${BRANCH}
+
+This tells Jenkins to use the value of the BRANCH parameter as the branch to build.
+
+So, if you have a string parameter named BRANCH with the value main or feature/new-feature, Jenkins will build the corresponding branch.
+
+No additional syntax is needed beyond ${BRANCH}.
