@@ -3,11 +3,9 @@
 ### Steps to create a Jenkins job with a Date parameter:
 
 
-- Steo -1
+ **Install the Date Parameter Plugin:**
 
 To create a Jenkins job with a Date parameter, you will typically use the "Date Parameter Plugin.
-
- **Install the Date Parameter Plugin:**
 
   - Navigate to "Manage Jenkins" > "Manage Plugins."
   
