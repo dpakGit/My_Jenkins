@@ -30,6 +30,10 @@ To create a Jenkins job with a Date parameter, you will typically use the "Date 
 
    - Select "Date Parameter."
 
+<br><br>
+<img width="1920" height="1080" alt="Screenshot (453)" src="https://github.com/user-attachments/assets/e26aef8b-0f75-4675-8099-7c0113ef31b5" />
+<br><br>
+
 **Configure the Date Parameter:**
 
  - Name: Provide a unique name for your date parameter (e.g., BUILD_DATE, DEPLOYMENT_DATE).
@@ -43,7 +47,13 @@ To create a Jenkins job with a Date parameter, you will typically use the "Date 
 - You can set a default date using a string matching your Date Format (e.g., 2025-10-16).
 
 - Alternatively, you can use Java coding style to set a dynamic default, such as LocalDate.now() for the current date.
+- 
+<br><br>
+<img width="1920" height="1080" alt="Screenshot (458)" src="https://github.com/user-attachments/assets/408b3883-faee-4cef-91c3-ea3f3de8bc93" />
 
+<br><br>
+<img width="1920" height="1080" alt="Screenshot (454)" src="https://github.com/user-attachments/assets/a733c6e4-e7f9-4b67-a6d0-427c692edea7" />
+<br><br>
 **Save the Job Configuration:**
  
  - Click "Apply" and then "Save" to save your changes.
@@ -59,3 +69,6 @@ Within your build steps (e.g., "Execute shell" or "Windows batch command"), you 
     echo "Building for date: $BUILD_DATE"
     # Further actions using the date parameter
 ```
+
+<br><br>
+<img width="1920" height="1080" alt="Screenshot (457)" src="https://github.com/user-attachments/assets/af17974b-9acf-4461-9c70-8e04d88bdb30" />
