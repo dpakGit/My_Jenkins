@@ -166,5 +166,108 @@ You can configure the Project-based Matrix Authorization Strategy for the "Deplo
 
 In this example, the Operations team has full control over the job, while developers can only view the job configuration.
 
-
 ### 
+
+### Let's break down the difference between assigning Read permission for a job and Read permission for Overall in the Authorization Matrix-based security:
+
+Read permission for a Job:
+
+- Grants the user permission to view the job's configuration and build history.
+- Allows the user to see the job's details, such as its description, parameters, and build logs.
+- Does not grant permission to build, configure, or modify the job in any way.
+
+Read permission for Overall:
+
+- Grants the user permission to view the overall Jenkins instance, including:
+    - Job names and descriptions (but not necessarily the job's configuration or build history)
+    - Node information (e.g., node names, labels, and status)
+    - System configuration (e.g., global security settings, plugin configurations)
+- Does not grant permission to view specific job configurations or build history unless explicitly granted.
+
+In summary:
+
+- Read permission for a Job allows users to view the job's details and build history.
+- Read permission for Overall allows users to view the overall Jenkins instance, including job names and descriptions, node information, and system configuration.
+
+To illustrate the difference:
+
+- If you grant a user Read permission for a Job, they can view the job's configuration and build history for that specific job.
+- If you grant a user Read permission for Overall, they can see the job's name and description in the Jenkins dashboard, but may not be able to view the job's configuration or build history unless they have explicit Read permission for that job.
+
+Does that clarify the difference?
+
+### Let's break down the different columns in the Authorization Matrix-based security:
+
+1. Overall:
+    - Refers to global permissions that apply to the entire Jenkins instance.
+    - Includes permissions like Administer (full control), Read (view system configuration), etc.
+
+2. Agent:
+    - Refers to permissions related to managing Jenkins agents (nodes or slaves).
+    - Includes permissions like Configure (configure agents), Delete (delete agents), Connect (connect to agents), etc.
+
+3. Job:
+    - Refers to permissions related to managing Jenkins jobs.
+    - Includes permissions like Read (view job configuration), Build (trigger builds), Configure (configure job settings), Create (create new jobs), Delete (delete jobs), etc.
+
+4. Run:
+    - Refers to permissions related to managing job builds (runs).
+    - Includes permissions like Read (view build details), Cancel (cancel running builds), Delete (delete build records), etc.
+
+5. View:
+    - Refers to permissions related to managing Jenkins views.
+    - Includes permissions like Read (view existing views), Create (create new views), Configure (configure views), Delete (delete views), etc.
+
+6. SCM:
+    - Refers to permissions related to Source Control Management (SCM) systems.
+    - Includes permissions like Tag (create tags in SCM), etc.
+
+7. Administer:
+    - Typically a global permission that grants full control over Jenkins.
+    - Includes all other permissions.
+
+Each column represents a specific area of Jenkins where permissions can be granted or denied. By setting permissions in these columns, you can control what actions users or groups can perform in Jenkins.
+
+### In Matrix-based security in Jenkins, Overall Read permission for a user means:
+
+The user can view the Jenkins system configuration, including:
+
+1. System settings
+2. Global configuration
+3. Plugin configurations
+4. Node information
+5. Job names and descriptions (but not necessarily the job's configuration or build history)
+
+What they can't do:
+
+1. Modify any configuration
+2. Build, configure, or delete jobs
+3. Manage nodes or slaves
+4. Install or uninstall plugins
+
+In essence, Overall Read permission provides a read-only view of the Jenkins system's configuration and status, allowing users to get an overview of the system without being able to make any changes.
+
+This permission is useful for users who need to:
+
+1. Monitor the Jenkins system
+2. Get an overview of the system's configuration
+3. View system information without being able to modify it
+
+Does that clarify the meaning of Overall Read permission?
+
+### To summarize :
+
+1. Overall Read permission:
+    - Grants access to the Jenkins instance itself.
+    - Allows users to view the Jenkins dashboard, system configuration, and node information.
+    - Does not grant access to job configurations or build history.
+2. Job Read permission:
+    - Grants access to specific jobs.
+    - Allows users to view job configurations, build history, and other job-related information.
+
+So, if you want users to:
+
+- View the Jenkins instance and its configuration, grant Overall Read.
+- View specific jobs and their configurations, grant Job Read.
+
+You're absolutely right!
