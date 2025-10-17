@@ -1,3 +1,8 @@
+https://tutorials.ducatindia.com/jenkins/jenkins-user-management
+
+https://tutorials.ducatindia.com/jenkins/jenkins-user-management
+
+
 ### Why create multiple users in Jenkins?
 
 Creating multiple users in Jenkins allows you to control access to jobs, views, and other resources based on user roles or responsibilities. This ensures that users can only perform actions that are relevant to their job functions.
@@ -271,3 +276,29 @@ So, if you want users to:
 - View specific jobs and their configurations, grant Job Read.
 
 You're absolutely right!
+
+
+```
+Jenkins user management involves creating, configuring, and assigning permissions to users to control their access and actions within the Jenkins environment. This process is crucial for maintaining security and ensuring proper access control.
+Creating a New User:
+Log in as an administrator: to your Jenkins instance.
+Navigate to Manage Jenkins from the Jenkins dashboard.
+Under the "Security" section, select Manage Users.
+Click on Create User.
+Fill in the required details: Username, Password, Confirm Password, Full Name, and Email Address.
+Click Create User to save the new user.
+Managing Existing Users:
+Once users are created, you can manage them from the "Manage Users" page. This includes:
+Configuring a user: Clicking the "Configure" option next to a user allows you to update their details, such as full name, email, or password.
+Deleting a user: Users can be removed from the system if they are no longer needed.
+Implementing Role-Based Access Control (RBAC):
+For more granular control over user permissions, Jenkins offers role-based authorization, typically implemented via the Role-based Authorization Strategy plugin.
+Install the Role-based Authorization Strategy plugin: if not already installed.
+Navigate to Manage Jenkins > Configure Global Security.
+Under "Authorization," select Role-Based Strategy.
+Navigate to Manage Jenkins > Manage and Assign Roles.
+Define Global Roles: Create roles (e.g., "admin", "developer", "tester") and assign them global permissions (e.g., Job/Read, Job/Create).
+Define Item Roles (optional): For more specific access, create roles that apply to particular jobs or folders using regular expressions to match item names.
+Assign Roles to Users: Assign the defined roles to individual users or user groups, granting them the corresponding permissions.
+By effectively utilizing user management and role-based access control, you can ensure a secure and organized Jenkins environment where users have appropriate access levels based on their responsibilities.
+```
