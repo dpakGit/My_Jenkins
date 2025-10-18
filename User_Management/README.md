@@ -302,3 +302,7 @@ Define Item Roles (optional): For more specific access, create roles that apply 
 Assign Roles to Users: Assign the defined roles to individual users or user groups, granting them the corresponding permissions.
 By effectively utilizing user management and role-based access control, you can ensure a secure and organized Jenkins environment where users have appropriate access levels based on their responsibilities.
 ```
+
+
+### Metrix-Based, Role-Based and Project-based Matrix Authentication in Jenkins :
+https://medium.com/@maheshparade/metrix-based-role-based-and-project-based-matrix-authentication-in-jenkins-ab984314b1d8
