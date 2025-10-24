@@ -116,7 +116,19 @@ It's worth noting that "Authenticated Users" is a special group that is automati
 
 *In Matrix-based security in Jenkins, granting permissions to the 'Authenticated Users' matrix and leaving the permission matrices for individual users blank will effectively give those permissions to all authenticated users. This is a common way to set a baseline permission level for all users. It's used when you want all authenticated users to have the same permissions by default.*
 
+Example:
+If you grant "Job Read" and "View Read" permissions to "authenticated users" in the global security matrix, every user who logs into Jenkins will be able to see all jobs and views. However, they will not be able to build jobs, configure projects, or manage credentials unless explicitly granted those permissions either individually or through group membership.
+
+
 <img width="1920" height="1080" alt="Screenshot (483)" src="https://github.com/user-attachments/assets/05f0fb54-1971-42dd-be12-1bdca03e86c0" />
+
+Jenkins Matrix-based Security, specifically the "authenticated users" entry, refers to the permissions granted to any user who has successfully logged into Jenkins. This differs from "anonymous" users, who are unauthenticated users accessing the Jenkins environment.
+Key aspects of "authenticated users" in Matrix-based Security:
+Global Permissions: When using the global Matrix-based Security (not project-based), the permissions granted to "authenticated users" apply to all authenticated users across the entire Jenkins instance.
+Default Permissions: By default, the "authenticated" entry typically has no permissions configured. This means that simply being authenticated does not automatically grant access to any specific actions or resources within Jenkins.
+Granular Control: Administrators can use the "authenticated" entry to grant a baseline level of access to all authenticated users. For example, you might grant "Overall Read" permission to all authenticated users, allowing them to view jobs and views but not modify them.
+Combination with Individual Users/Groups: Permissions granted to "authenticated users" are additive with permissions granted to specific individual users or groups. If a user is part of a group that has more specific permissions, those permissions will also apply.
+Security Best Practices: It is generally recommended to limit the permissions granted to "authenticated users" to a minimum, such as read-only access, and then grant more specific permissions to individual users or groups based on their roles and responsibilities. This helps in maintaining a secure Jenkins environment.
 
 
 
