@@ -113,3 +113,10 @@ For example, you might grant "Authenticated Users" the permission to:
 By granting permissions to "Authenticated Users", you can establish a common set of privileges that apply to all authenticated users, while still maintaining more restrictive permissions for sensitive areas of Jenkins.
 
 It's worth noting that "Authenticated Users" is a special group that is automatically populated with all authenticated users, so you don't need to manage membership in this group explicitly.
+
+*In Matrix-based security in Jenkins, granting permissions to the 'Authenticated Users' matrix and leaving the permission matrices for individual users blank will effectively give those permissions to all authenticated users. This is a common way to set a baseline permission level for all users. It's used when you want all authenticated users to have the same permissions by default.*
+
+<img width="1920" height="1080" alt="Screenshot (483)" src="https://github.com/user-attachments/assets/05f0fb54-1971-42dd-be12-1bdca03e86c0" />
+
+
+
