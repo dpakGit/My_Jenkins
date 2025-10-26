@@ -2,6 +2,12 @@ Configuring project-based matrix authorization in Jenkins allows for fine-graine
 
 ### Steps to configure project-based matrix authorization:
 
+Note : Before following the below steps create users.
+      - - Navigate to Manage Jenkins > Users
+<br><br>
+<img width="1920" height="1080" alt="Screenshot (481)" src="https://github.com/user-attachments/assets/dc583f88-da7b-41c4-80b8-a8ac89ea6d42" />
+<br><br>
+
 **Step -1: Install the Matrix Authorization Strategy Plugin:**
 
 - Navigate to Manage Jenkins > Manage Plugins.
@@ -20,6 +26,10 @@ Configuring project-based matrix authorization in Jenkins allows for fine-graine
 - Add users/groups and define their global permissions. Typically, users might receive `Overall Read` permission at this stage, with more specific permissions defined at the project level.
    It is recommended to initially grant minimal permissions, such as `"Overall Read`," to authenticated users/users.
 
+  <br><br>
+  <img width="1920" height="1080" alt="Screenshot (488)" src="https://github.com/user-attachments/assets/44b1a86a-8d3a-42b8-a4c1-7dd30299d122" />
+  <br><br>
+  
   **Step -3: Configure Project-Specific Permissions:**
 
 - Navigate to a specific Jenkins job or project you want to secure.
@@ -34,7 +44,10 @@ Configuring project-based matrix authorization in Jenkins allows for fine-graine
 
 **Define a custom ACL for this project**: This allows you to add users/groups and define specific permissions (e.g., Job Build, Job Configure, Job Read, Job Delete) for that particular project, overriding global settings for those users/groups on this project.
 
-- Add users/groups and assign specific permissions for that job (e.g., Build, Cancel, Read, Configure). 
+- Add users/groups and assign specific permissions for that job (e.g., Build, Cancel, Read, Configure).
+<br><br>
+<img width="1920" height="1080" alt="Screenshot (486)" src="https://github.com/user-attachments/assets/48c0fab2-b3b6-478a-8e24-57677c44235e" />
+<br><br>
 
 **Save Changes:**
 
