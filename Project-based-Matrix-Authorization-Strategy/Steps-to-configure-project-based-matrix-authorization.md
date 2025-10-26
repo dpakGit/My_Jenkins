@@ -3,7 +3,10 @@ Configuring project-based matrix authorization in Jenkins allows for fine-graine
 ### Steps to configure project-based matrix authorization:
 
 Note : Before following the below steps create users.
-      - - Navigate to Manage Jenkins > Users
+
+
+- Navigate to Manage Jenkins > Users
+
 <br><br>
 <img width="1920" height="1080" alt="Screenshot (481)" src="https://github.com/user-attachments/assets/dc583f88-da7b-41c4-80b8-a8ac89ea6d42" />
 <br><br>
