@@ -2,6 +2,7 @@ https://tutorials.ducatindia.com/jenkins/jenkins-user-management
 
 https://tutorials.ducatindia.com/jenkins/jenkins-user-management
 
+#### Note : Matrix Authorization Strategy and Project-based Matrix Authorization comes under user management
 
 ### Why create multiple users in Jenkins?
 
