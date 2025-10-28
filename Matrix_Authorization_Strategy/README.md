@@ -130,5 +130,17 @@ Granular Control: Administrators can use the "authenticated" entry to grant a ba
 Combination with Individual Users/Groups: Permissions granted to "authenticated users" are additive with permissions granted to specific individual users or groups. If a user is part of a group that has more specific permissions, those permissions will also apply.
 Security Best Practices: It is generally recommended to limit the permissions granted to "authenticated users" to a minimum, such as read-only access, and then grant more specific permissions to individual users or groups based on their roles and responsibilities. This helps in maintaining a secure Jenkins environment.
 
+#### Note: 
+
+By adding "all the jobs in a Jenkins instance", you've made the description even more accurate and clear.
+
+Yes, that's a great way to phrase it:
+
+"Matrix-based authorization refers to a global authorization strategy in Jenkins where you can define a matrix of permissions for different roles or users across all the jobs in a Jenkins instance. This allows you to manage permissions in a centralized way, specifying what actions a particular role or user can perform on these jobs."
+
+This clearly conveys that matrix-based authorization is a global strategy that applies to all jobs in the Jenkins instance, and that it allows for centralized management of permissions.
+
+Well done!
+
 
 
