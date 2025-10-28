@@ -149,7 +149,7 @@ Dashboard > Manage Jenkins > Security >
 <img width="1920" height="1080" alt="Screenshot (491)" src="https://github.com/user-attachments/assets/36cd9573-ef8a-4101-a3ad-9e1c72174b66" />
 <br><br>
 
-Let's break down each of these concepts in Jenkins:
+Let's break down each of the above concepts in Jenkins:
 
 1. Agents
    ( TCP port for inbound agents ? )
@@ -182,3 +182,40 @@ Use case: If you need to ensure secure communication between the Jenkins control
 In summary, these settings control how Jenkins agents communicate with the controller over TCP. By configuring these settings, you can ensure secure and reliable communication between the controller and agents, which is essential for distributed builds, tests, and deployments.
 
 
+#### In Jenkins, the terms "agent" and "slave node" are often used interchangeably, but "agent" is the more modern and preferred term.
+
+In the past, Jenkins used the term "slave" to refer to machines that ran builds, tests, and deployments on behalf of the Jenkins master (now called the "controller"). However, the term "slave" was deemed to be potentially problematic, and the Jenkins community has since adopted the term "agent" to refer to these machines.
+
+According to the Jenkins documentation, an "agent" is a machine that runs builds, tests, and deployments on behalf of the Jenkins controller. Agents can be physical or virtual machines, and they can run on a variety of operating systems.
+
+So, in the context of the settings I mentioned earlier, "agent" and "slave node" refer to the same thing: a machine that runs builds, tests, and deployments on behalf of the Jenkins controller.
+
+It's worth noting that the term "node" is also sometimes used in Jenkins to refer to agents. For example, the "Manage Nodes" page in Jenkins is used to manage agents. However, in general, "agent" is the more commonly used term in modern Jenkins documentation and discussions.
+
+
+<br><br>
+<img width="1920" height="1080" alt="Screenshot (492)" src="https://github.com/user-attachments/assets/35bcebdf-7357-4b71-a635-4e4bad31a8c6" />
+<br><br>
+
+Let's break down what the above options mean:
+
+Allow Git Hooks to run on the Jenkins Controller
+
+If you enable this option, Git hooks will be allowed to run on the Jenkins controller machine. This means that when a Git event triggers a Jenkins job, the Git hook scripts will be executed on the controller machine.
+
+Allow Git Hooks to run on Jenkins Agents
+
+If you enable this option, Git hooks will be allowed to run on the Jenkins agent machines. This means that when a Git event triggers a Jenkins job, the Git hook scripts will be executed on the agent machine that runs the job.
+
+Here are some considerations to keep in mind:
+
+- Security: Allowing Git hooks to run on the controller or agents can introduce security risks if the hooks are not properly validated or sanitized. Malicious hook scripts could potentially execute arbitrary code on the controller or agent machines.
+- Performance: Running Git hooks on the controller or agents can add overhead to your Jenkins instance, especially if the hooks perform resource-intensive operations.
+- Job configuration: If you want to run Git hooks as part of your Jenkins job, you'll need to configure the job to use a specific agent or node that has Git hooks enabled.
+
+When to enable each option:
+
+- Allow on Controller: Enable this option if you need to run Git hooks that are specific to the controller machine, such as hooks that interact with the Jenkins configuration or perform administrative tasks.
+- Allow on Agents: Enable this option if you need to run Git hooks as part of your Jenkins jobs, and the hooks need to access the workspace or perform operations specific to the agent machine.
+
+By controlling where Git hooks run, you can better manage security, performance, and job configuration in your Jenkins instance.
