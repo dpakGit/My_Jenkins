@@ -142,5 +142,43 @@ This clearly conveys that matrix-based authorization is a global strategy that a
 
 Well done!
 
+#### Note: 
+
+Dashboard > Manage Jenkins > Security >
+<br><br>
+<img width="1920" height="1080" alt="Screenshot (491)" src="https://github.com/user-attachments/assets/36cd9573-ef8a-4101-a3ad-9e1c72174b66" />
+<br><br>
+
+Let's break down each of these concepts in Jenkins:
+
+1. Agents
+   ( TCP port for inbound agents ? )
+
+In Jenkins, agents (also known as slaves or nodes) are machines that run builds, tests, and deployments. The "Agents TCP port for inbound agents" setting allows you to specify a TCP port that the Jenkins controller will use to communicate with inbound agents.
+
+Inbound agents are agents that initiate a connection to the Jenkins controller. This setting is necessary to allow the controller to receive incoming connections from agents.
+
+Use case: If you have agents behind a firewall or NAT, you may need to specify a specific TCP port for the agents to connect to the Jenkins controller. By setting the "Agents TCP port for inbound agents" option, you can allow incoming connections from agents on a specific port.
+
+2. Fixed / Random
+
+This setting determines how the TCP port for inbound agents is selected.
+
+- Fixed: If you select "Fixed", you need to specify a specific TCP port number that the Jenkins controller will use to listen for incoming connections from agents. This is useful if you have a firewall or NAT that requires a specific port to be used.
+- Random: If you select "Random", Jenkins will dynamically allocate an available TCP port for inbound agents. This is useful if you don't have specific port requirements or if you're using a cloud-based Jenkins setup where the port can be dynamically allocated.
+
+3. Disable
+
+If you select "Disable", the Jenkins controller will not listen for incoming connections from agents on any TCP port. This means that agents will not be able to connect to the controller using the TCP protocol.
+
+4. Agent protocols
+
+Agent protocols define the communication protocol used between the Jenkins controller and agents. Jenkins supports multiple agent protocols, including:
+
+- Inbound TCP Agent Protocol/4 (TLS encryption): This protocol uses a TLS-encrypted connection between the controller and the agent. The connection is established by performing a TLS upgrade of the socket. This provides a secure, encrypted channel for communication between the controller and agents.
+
+Use case: If you need to ensure secure communication between the Jenkins controller and agents, you can select the "Inbound TCP Agent Protocol/4 (TLS encryption)" option. This ensures that all communication between the controller and agents is encrypted, which is particularly important if you're transmitting sensitive data or credentials.
+
+In summary, these settings control how Jenkins agents communicate with the controller over TCP. By configuring these settings, you can ensure secure and reliable communication between the controller and agents, which is essential for distributed builds, tests, and deployments.
 
 
