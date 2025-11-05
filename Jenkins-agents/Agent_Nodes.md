@@ -69,7 +69,7 @@ Jenkins UI Configuration:
     
     - Launch method: Launch agents via SSH
     
-    - Host: <Agent-Node-Public-IP>
+    - Host:  <Agent-Node-Public-IP>
     
     - Credentials:
     
