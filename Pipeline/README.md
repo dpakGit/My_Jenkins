@@ -15,6 +15,10 @@
 
 https://www.jenkins.io/doc/book/pipeline/
 
+- Youtube : What is the difference between Freestyle and Pipeline in Jenkins
+- https://www.youtube.com/watch?v=IOUm1lw7F58
+- https://www.jenkins.io/pipeline/getting-started-pipelines/
+
 - Key Features of Jenkins Pipelines
 
 1. Code-based: Pipelines are written in code, just like your application code, and can be stored in a version control system    like Git. This makes it easy to manage and track changes to your pipeline and also giving teams the ability to edit,         review, and iterate upon their delivery pipeline.
