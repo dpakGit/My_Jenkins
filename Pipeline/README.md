@@ -1,3 +1,7 @@
+###  Contents of this README file 📃
+Why Pipeline?
+
+
 ### Limitations of Jenkins Freestyle Jobs over Pipeline Jobs
 
 Jenkins Freestyle jobs and Pipeline jobs are both used for automating tasks, but they have some key differences. Here are the limitations of 
