@@ -169,7 +169,7 @@ Q: What is the main benefit of using a Jenkinsfile over UI configuration? A: The
 Would you like me to elaborate on the Declarative vs. Scripted syntax differences in Pipeline jobs, or focus on a specific feature like parallelism?
 
 
-What is a Pipeline?
+#### What is a Pipeline?
 
 A Pipeline is a set of instructions written in a Domain-Specific Language (DSL) that defines a Continuous Integration/Continuous Deployment (CICD) workflow. It's similar to a Freestyle job, but with the added benefit of using a programming language (Groovy) to write the instructions.
 
